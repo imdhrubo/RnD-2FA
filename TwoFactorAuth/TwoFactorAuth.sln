@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwoFactorAuth", "TwoFactorAuth\TwoFactorAuth.csproj", "{6B227B9F-C2EA-4686-8068-9F6EB9B4DAFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoFactorAuth.API", "..\TwoFactorAuthSPA\TwoFactorAuthSPA.API\TwoFactorAuth.API\TwoFactorAuth.API.csproj", "{90D01BEC-6B50-4742-8B36-6C3A739BE431}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B227B9F-C2EA-4686-8068-9F6EB9B4DAFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B227B9F-C2EA-4686-8068-9F6EB9B4DAFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B227B9F-C2EA-4686-8068-9F6EB9B4DAFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B227B9F-C2EA-4686-8068-9F6EB9B4DAFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90D01BEC-6B50-4742-8B36-6C3A739BE431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90D01BEC-6B50-4742-8B36-6C3A739BE431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90D01BEC-6B50-4742-8B36-6C3A739BE431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90D01BEC-6B50-4742-8B36-6C3A739BE431}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63A270AE-4925-4829-BC27-57675ECCE58A}
+	EndGlobalSection
+EndGlobal

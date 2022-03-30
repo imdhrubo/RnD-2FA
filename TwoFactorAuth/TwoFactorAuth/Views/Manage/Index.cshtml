@@ -1,0 +1,40 @@
+﻿@model TwoFactorAuth.Models.ManageViewModels.IndexViewModel
+
+@{
+    ViewData["Title"] = "Manage your account";
+}
+
+<h2>@ViewData["Title"]</h2>
+<p class="text-success">@ViewData["StatusMessage"]</p>
+
+<div>
+    <h4>Change your account settings</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Two-Factor Authentication:</dt>
+        <dd>
+
+            @if (Model.TwoFactor)
+            {
+                <p>
+                    Your Two Factor Authentication is Enabled
+                </p>
+                <form asp-controller="Manage" asp-action="DisableTwoFactorAuthentication" method="post" class="form-horizontal">
+                    <button type="submit" class="btn btn-primary">Disable</button>
+                </form>
+            }
+            else
+            {
+                <br />
+                <form asp-controller="Manage" asp-action="EnableTwoFactorAuthentication" method="get" class="form-horizontal">
+                    <button type="submit" class="btn btn-primary">Enable By SMS</button>
+                </form>
+                <br />
+                <p>Or</p>
+                <form asp-controller="Manage" asp-action="TwoFactorAuthenticationByAuthenticator" method="get" class="d-inline-block form-horizontal">
+                    <button type="submit" class="btn btn-primary">Enable By Authenticator</button>
+                </form>
+            }
+        </dd>
+    </dl>
+</div>

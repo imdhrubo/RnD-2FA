@@ -1,0 +1,27 @@
+﻿@model TwoFactorAuth.Models.ManageViewModels.EnableTwoFactorAuthenticationViewModel
+@{
+    ViewData["Title"] = "EnableTwoFactorAuthentication";
+}
+
+<h1>EnableTwoFactorAuthentication</h1>
+<dd>
+    <p>
+        Phone Numbers can be used as a second factor of verification in two-factor authentication.
+        See <a href="https://go.microsoft.com/fwlink/?LinkID=532713">this article</a>
+        for details on setting up this ASP.NET application to support two-factor authentication using SMS.
+    </p>
+    @(Model.PhoneNumber ?? "None")
+    @if (Model.PhoneNumber != null)
+    {
+        <a asp-controller="Manage" asp-action="AddPhoneNumber" class="btn-bracketed">Change</a>
+        <form asp-controller="Manage" asp-action="EnableTwoFactorAuthentication" method="post">
+            <input asp-for="PhoneNumber" type="hidden"/>
+            <button type ="submit" class="btn btn-primary">Activate</button>
+        </form>
+    }
+    else
+    {
+        <a asp-controller="Manage" asp-action="AddPhoneNumber" class="btn btn-primary">Add</a>
+    }
+</dd>
+
